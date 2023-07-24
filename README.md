@@ -1,4 +1,4 @@
-﻿# PasteBin
+﻿# [PasteBin](https://paste-bin.cyclic.app/)
 
 ![image](https://github.com/VJ-13/PasteBin/assets/64769412/3763dc70-62f1-4b92-bfb4-70b3e1224a86)
 
