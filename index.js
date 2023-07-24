@@ -14,10 +14,16 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
-// Connecting to the MongoDB 
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true, useUnifiedTopology: true
-}).then(() => { console.log('Connected to Mongoose');}).catch((err) => {console.log(err);});
+// Connecting to the MongoDB
+const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log(error);
+      process.exit(1);
+    }
+};
 
 // Get route for the home page
 app.get('/', (req, res) => {
@@ -82,4 +88,8 @@ app.get('/:id/just-text', async(req, res) => {
 });
 
 // App listening on port 3000
-app.listen(3000, () => {console.log('Server is listening on port 3000');});
+connectDB().then(() => {
+    app.listen(3000, () => {
+        console.log("Server started on port 3000");
+    });
+});
