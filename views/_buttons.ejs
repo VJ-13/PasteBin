@@ -1,0 +1,13 @@
+<div class="buttons-wrapper">
+    <a href="/" class="logo" >PasteBin </a>
+    <div class="buttons">
+        <% if (locals.canSave) { %>
+            <button class="btn" type="submit" data-toggle="tooltip" title="Save"> <i class="fa-solid fa-floppy-disk"></i> </button>
+        <% } %>
+        <a href="/new" class="btn" data-toggle="tooltip" title="New"> <i class="fa-solid fa-file-circle-plus"></i> </a>
+        <% if (locals.id != null) { %>
+            <a href="/<%= locals.id%>/duplicate" class="btn" data-toggle="tooltip" title="Edit & Duplicate"> <i class="fa-solid fa-pen-to-square"></i> </a>
+            <a href="/<%= locals.id%>/just-text" class="btn" data-toggle="tooltip" title="Just Text"> <i class="fa-solid fa-file-lines"></i> </a>
+        <% } %>
+    </div>
+</div>

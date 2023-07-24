@@ -1,0 +1,116 @@
+body {
+    background-color: #282c34;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    padding: 1.5rem 1rem;
+    font-size: 17px;
+    color: #839496;
+}
+
+pre {
+    margin: 0;
+}
+
+#code-display {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.line-number {
+    color: #7D7D7D;
+    font-family: monospace;
+    text-align: right;
+    padding-right: 0.2rem;
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    color: #839496;
+    font-family: monospace;
+    font-size: 1rem;
+    min-height: calc(100vh - 2rem);
+    margin-left: 1rem;
+    outline: none;
+    padding: 0;
+    resize: none;
+    width: 100%;
+}
+
+.buttons-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 180px;
+    opacity: .45;
+    transition: opacity .2s ease-in-out;
+    background-color: #141512;
+    padding: 1rem;
+}
+
+.buttons-wrapper:hover {
+    opacity: 1;
+}
+
+.logo {
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #8fbcc8;
+    width: 100%;
+    display: inline-block;
+}
+
+.logo:hover {
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    margin-top: .5rem;
+    justify-content: center;
+}
+
+.buttons > * + * {
+    margin-left: .25rem;
+}
+
+.btn{
+    cursor: pointer;
+    background: none;
+    color: #8fbcc8;
+    padding: .25rem .5rem;
+    transition: color .2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: white;
+}
+
+button{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#just-text {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: black;
+}
+
+.text-wrapper{
+    display: flex;
+    padding: 0.8rem 0.8rem;
+    background-color: #121212;
+    min-height: calc(100vh - 2rem);
+}
+
+.text-display{
+    color: white;
+}

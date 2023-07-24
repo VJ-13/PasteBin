@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/3.0.20/autosize.min.js" integrity="sha512-EAEoidLzhKrfVg7qX8xZFEAebhmBMsXrIcI0h7VPx2CyAyFHuDvOAUs9CEATB2Ou2/kuWEDtluEVrQcjXBy9yw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/e3b3119db5.js" crossorigin="anonymous"></script>
+    <title>PasteBin</title>
+</head>
+<body>
+    <form action="/save" method="POST">
+        <%- include("_buttons.ejs", {canSave: true}) %>
+        <div class="wrapper">
+            <div class="line-number">
+                &gt;
+            </div>
+            <textarea autofocus name="value"><%= locals.value %></textarea>
+        </div>
+    </form>
+    <script>
+        autosize(document.querySelector('textarea'));
+    </script>
+</body>
+</html>
