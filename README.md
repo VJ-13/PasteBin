@@ -1,6 +1,6 @@
 ﻿# [PasteBin](https://paste-bin.cyclic.app/)
 
-![image](https://github.com/VJ-13/PasteBin/assets/64769412/3763dc70-62f1-4b92-bfb4-70b3e1224a86)
+![image](https://github.com/VJ-13/PasteBin/assets/64769412/acca11e0-d91b-4d51-94c9-cb7705a08db5)
 
 PasteBin is a lightweight and efficient web application, developed in NodeJS using Express and EJS, designed to mimic the popular HasteBin platform. The primary objective of this project is to provide users with a secure and user-friendly platform to share and store code snippets or text content with ease.
 
